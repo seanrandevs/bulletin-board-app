@@ -6,16 +6,16 @@ const InputField = () => {
     <div className='input-fields'>
         <Form>
            <Form.Label className='add-label'>Add New Post</Form.Label>
-            <Form.Group>
-              <Form.Label className='label'>Title:</Form.Label>
+            <Form.Group className='group'>
+              <Form.Label>Title:</Form.Label>
               <Form.Control type='text' />
             </Form.Group>
-            <Form.Group>
-              <Form.Label className='label'>User:</Form.Label>
+            <Form.Group className='group'>
+              <Form.Label>User:</Form.Label>
               <Form.Control type='text' />
             </Form.Group>
-            <Form.Group>
-              <Form.Label className='label'>Content:</Form.Label>
+            <Form.Group className='group'>
+              <Form.Label>Content:</Form.Label>
               <Form.Control as="textarea" rows={2} />
             </Form.Group>
             <div className="d-grid gap-2">

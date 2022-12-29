@@ -1,10 +1,12 @@
 import './App.css';
 import InputField from './components/InputField';
+import BulletinBoard from './components/BulletinBoard';
 
 function App() {
   return (
-    <div className='bulletin-board'>
-     <InputField />
+    <div className='input-board'>
+       <InputField />
+       <BulletinBoard />
     </div>
   );
 }
