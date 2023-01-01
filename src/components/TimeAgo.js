@@ -15,4 +15,4 @@ const TimeAgo = ({ timestamp }) => {
   )
 }
 
-export default TimeAgo
+export default TimeAgo;

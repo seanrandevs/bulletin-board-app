@@ -34,22 +34,6 @@
 .post-data {
     padding: 1.5rem;
 }
-.icons {
-    margin-top: 0.7rem;
-    display: flex;
-}
-.icon {
-    font-size: 1.1rem;
-    display: flex;
-    padding: 0 0.5rem;
-    cursor: pointer;
-}
-.icon p {
-    margin-left: 0.2rem;
-    font-size: 1rem;
-}
-.thumbs {
-    font-size: 1.2rem;
-    margin-top: 3px;
-    color: #ffeb3b;
+.reactionButton {
+  border: none;
 }
