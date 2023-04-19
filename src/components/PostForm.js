@@ -41,6 +41,7 @@ const canSave = Boolean(title) && Boolean(content) && Boolean(userId);
             <Form.Group className='group'>
               <Form.Label>Title:</Form.Label>
               <Form.Control 
+              data-testid="postTitle"
               id="postTitle" 
               name="postTitle" 
               value={title} 
@@ -49,14 +50,19 @@ const canSave = Boolean(title) && Boolean(content) && Boolean(userId);
               />
               <Form.Group>
                 <Form.Label>Author:</Form.Label>
-                <Form.Select id='postAuthor' value={userId} onChange={onUserChanged}>
-                  {userOptions}
+                <Form.Select 
+                data-testid="postAuthor"
+                id='postAuthor' 
+                value={userId} 
+                onChange={onUserChanged}>
+                {userOptions}
                 </Form.Select>
               </Form.Group>
             </Form.Group>
             <Form.Group className='group'>
               <Form.Label>Content:</Form.Label>
               <Form.Control 
+              data-testid="postContent"
               id="postContent" 
               name="postContent" 
               value={content} 
@@ -67,6 +73,7 @@ const canSave = Boolean(title) && Boolean(content) && Boolean(userId);
             </Form.Group>
             <div className="d-grid gap-2">
             <Button 
+            data-testid="button"
             className='button' 
             size='lg' 
             variant="dark" 
