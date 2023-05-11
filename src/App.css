@@ -1,5 +1,8 @@
 * {
     background-color: #909090;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 .input-board {
     background-color: #909090;
@@ -8,7 +11,7 @@
     justify-content: center;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 1rem;
+    padding: 1rem 1rem;
 }
 .add-label {
     font-size: 2rem;
