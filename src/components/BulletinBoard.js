@@ -11,7 +11,7 @@ const BulletinBoard = () => {
         const renderPosts = orderedPosts.map(post => (
             <div className="posts" key={post.id}>
             <div className="post-data">
-                <h3 data-testid="title">{post.title}</h3>
+                <h3 data-testid="title-post">{post.title}</h3>
                 <h5>{post.content.substring(0, 100)}</h5>
                 <h6><PostAuthor userId={post.userId} /><TimeAgo timestamp={post.date} /></h6>
                 <ReactionButtons post={post} />

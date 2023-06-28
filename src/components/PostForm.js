@@ -51,7 +51,6 @@ const canSave = Boolean(title) && Boolean(content) && Boolean(userId);
               <Form.Group>
                 <Form.Label>Author:</Form.Label>
                 <Form.Select 
-                data-testid="postAuthor"
                 id='postAuthor' 
                 value={userId} 
                 onChange={onUserChanged}>

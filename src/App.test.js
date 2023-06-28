@@ -1,5 +1,6 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
+import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import store from '../src/redux/store';
 
@@ -17,18 +18,21 @@ describe("PostForm", () => {
         const labelElement = screen.getByText(/Add New Post/i);
         expect(labelElement).toBeInTheDocument();
     })
+    it('should render test post', () => {
+        render(<MockAppCall />)
+        const title = screen.getByTestId('postTitle');
+        const author = screen.getByRole('combobox');
+        const content = screen.getByTestId('postContent');
+        const btn = screen.getByTestId('button');
+        userEvent.type(title, 'hello world');
+        userEvent.selectOptions(author, 'Kevin Durant');
+        userEvent.type(content, 'how are you doing');
+        userEvent.click(btn);
+        const titlePost = screen.getByRole('heading', { name: /hello world/i });
+        const authorPost = screen.getByText(/by Kevin Durant/i);
+        const contentPost = screen.getByRole('heading', { name: /how are you doing/i });
+        expect(titlePost).toBeInTheDocument();
+        expect(authorPost).toBeInTheDocument();
+        expect(contentPost).toBeInTheDocument();
+    });
 })
-
-// it('passes title input to post', async () => {
-//     render(<MockAppCall />)
-//     const titleInput = screen.getByTestId("postTitle");
-//     const authorSelect = screen.getByTestId("postAuthor");
-//     const contentInput = screen.getByTestId("postContent");
-//     const buttonElement = screen.getByTestId("button");
-//     fireEvent.change(titleInput, { target: { value: "Hey, there" } });
-//     fireEvent.change(authorSelect, { target: { value: "Kevin Durant" } });
-//     fireEvent.change(contentInput, { target: { value: "How are you doing?" } });
-//     fireEvent.click(buttonElement);
-//     const hElement = screen.getByTestId("title");
-//     expect(hElement).toHaveTextContent("Hey, there");
-// })

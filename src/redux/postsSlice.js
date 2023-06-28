@@ -8,7 +8,6 @@ const initialState = [
     date: sub(new Date(), { minutes: 10 }).toISOString(),
     reactions: {
         thumbsUp: 0,
-        thumbsDown: 0,
         heart: 0
     }
  },
@@ -34,7 +33,6 @@ const postsSlice = createSlice({
                     userId,
                     reactions: {
                         thumbsUp: 0,
-                        thumbsDown: 0,
                         heart: 0
                     }
                 }

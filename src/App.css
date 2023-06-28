@@ -39,4 +39,15 @@
 }
 .reactionButton {
   border: none;
+  font-weight: 500;
+}
+.reaction-div {
+    display: flex;
+}
+.count {
+    padding-left: 0.2rem;
+}
+.emojis  {
+    display: flex;
+    padding-left: 0.4rem;
 }
